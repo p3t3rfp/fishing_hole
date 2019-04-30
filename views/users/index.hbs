@@ -1,0 +1,16 @@
+<h3 class="card-text sub-main">Join the users on our site</p>
+
+    <a href="/users/new" class="btn btn-primary btn-lg button">Create a new user</a>
+
+    <div class="row">
+        {{#each users}}
+        <div class="col s4 m3">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <h3 class="card-title"><a href="/users/{{id}}">{{name}}</a></h3>
+                    <h3 class="card-title">Favorite type of fishing: {{typeOfFishing}}</h3>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>

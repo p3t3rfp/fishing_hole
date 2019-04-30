@@ -13,7 +13,7 @@ const fishingHoleController = {
 
   create: (req, res) => {
     FishingHole.create(req.body).then(fishingHole => {
-      res.redirect(`/fishingHoles/${fishingHole._id}`)
+      res.redirect(`/fishingHoles`)
     })
   },
 
@@ -31,14 +31,14 @@ const fishingHoleController = {
 
   update: (req, res) => {
     FishingHole.findByIdAndUpdate(req.params.fishingHoleId, req.body, {new:true}).then(() => {
-        res.redirect(`/${req.params.fishingHoleId}`)
+        res.redirect(`/fishingHoles/${req.params.fishingHoleId}`)
     })
   },
 
   delete: (req, res) => {
     FishingHole.findByIdAndDelete(req.params.fishingHoleId).then(() => {
       console.log(`Deleted fishingHole with id of ${req.params.fishingHoleId}`)
-      res.redirect('/')
+      res.redirect('/fishingHoles')
     })
   },
 }
