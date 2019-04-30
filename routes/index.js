@@ -38,18 +38,12 @@ router.delete('/fishingHoles/:fishingHoleId', fishingHoleController.delete)
 
 // Gear routes
 
-router.get('/gear', gearController.index)
+router.get('/gears', gearController.index)
 
-router.get('/gear/new', gearController.new)
+router.get('/gears/new', gearController.new)
 
-router.post('/gear', gearController.create)
+router.post('/gears', gearController.create)
 
-router.get('/gear/:gearId', gearController.show)
-
-router.get('/gear/:gearId/edit', gearController.edit)
-
-router.put('/gear/:gearId', gearController.update)
-
-router.delete('/gear/:gearId', gearController.delete)
+router.delete('/gears/:gearId', gearController.delete)
 
 module.exports = router
