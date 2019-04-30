@@ -1,7 +1,9 @@
-const applicationController = {
+const User = require('../models/User')
+
+const appController = {
     index: (req, res) => {
-      res.send('hello from the application index page')
+      res.render('index')
     }
   }
   
-  module.exports = applicationController
+  module.exports = appController

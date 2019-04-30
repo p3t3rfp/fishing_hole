@@ -9,6 +9,7 @@ const gearController = require('../controllers/gearController')
 router.get('/', appController.index)
 
 // User routes
+
 router.get('/users', userController.index)
 
 router.get('/users/new', userController.new)
@@ -20,6 +21,7 @@ router.get('/users/:userId', userController.show)
 router.delete('/users/:userId', userController.delete)
 
 // Fishing Hole routes
+
 router.get('/fishingHoles', fishingHoleController.index)
 
 router.get('/fishingHoles/new', fishingHoleController.new)
@@ -40,11 +42,13 @@ router.get('/gear', gearController.index)
 
 router.get('/gear/new', gearController.new)
 
-router.post('/gear/:gearId', gearController.addPet)
-
 router.post('/gear', gearController.create)
 
 router.get('/gear/:gearId', gearController.show)
+
+router.get('/gear/:gearId/edit', gearController.edit)
+
+router.put('/gear/:gearId', gearController.update)
 
 router.delete('/gear/:gearId', gearController.delete)
 
